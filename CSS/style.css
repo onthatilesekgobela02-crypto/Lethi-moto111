@@ -1,0 +1,109 @@
+/* General styles */
+body {
+  background-color: #eafaf1;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #2d3436;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #1abc9c;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  height: 120px;
+  margin-bottom: 10px;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  color: rgb(15, 26, 175);
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  background: #16a085;
+  transform: scale(1.05);
+}
+
+/* Main content */
+main {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #00695c;
+  margin-bottom: 15px;
+}
+
+.main-image {
+  width: 80%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+  background: #1abc9c;
+  color: rgb(26, 18, 139);
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  nav a {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+
+  .logo {
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main-image {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  nav a {
+    font-size: 15px;
+  }
+}
