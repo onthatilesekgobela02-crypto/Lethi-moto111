@@ -1,43 +1,184 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lethi'Moto Gallery</title>
-    <link rel="stylesheet" href="../CSS/style.css"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lethi'Moto Carwash Gallery | See Our Work</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Browse Lethi'Moto Carwash Gallery showcasing our car cleaning and detailing services in Limpopo.">
+  <meta name="keywords" content="Lethi'Moto Carwash, Gallery, Carwash Services, Car Cleaning, Limpopo">
+  <meta name="author" content="Lethi'Moto Carwash">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Lethi'Moto Carwash Gallery">
+  <meta property="og:description" content="Browse our gallery showcasing Lethi'Moto Carwash services.">
+  <meta property="og:image" content="../Assets/65fd8fca49072e63b7ead056_localcarwash_website_18.webp">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourwebsite.com/Pages/gallery.html">
+
+  <link rel="stylesheet" href="../CSS/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    #gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    #gallery img {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    #gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Lightbox Modal */
+    #lightboxModal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    #lightboxModal img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+
+    #closeLightbox {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+    }
+
+    #backToTop {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 1000;
+      padding: 10px 15px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-     <!--Navigation Menu-->
-     <nav>
-        <ul>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+      <li><a href="./gallery.html" class="active">Gallery</a></li>
+      <li><a href="./services.html">Services</a></li>
+      <li><a href="./Enquiry.html">Enquiry</a></li>
+    </ul>
+  </nav>
 
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-        <li><a href="./gallery.html">Gallery</a></li>
-        <li><a href="./services.html">Services</a></li>
-        
-        </ul>
-    </nav>
-     
-    <header>
-        <!--Logo-->
-        <section id="carwash">
-            <img src="../Assets/65fd8fca49072e63b7ead056_localcarwash_website_18.webp" width="500" height="500">
-        </section>
-    </header>
-    
-    <main>
-        <!--Slideshow Section-->
-        <section id="--Slideshow">
-            <p style="font-size: larger; font-style: oblique; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Enjoy a slideshow showcasing Lethi'Motos Carwash Services</p>
-            <img id="Slideshow-image" src="../Assets/images (4).jfif" alt="Slideshow image" width="300" height="300">
-            <img id="Slideshow image" src="../Assets/images (5).jfif" alt="Slideshow image" width="300" height="300">
-            <img id="Slideshow image" src="../Assets/images (6).jfif" alt="Slideshow image" width="300" height="300">
-            <img id="Slideshow image" src="../Assets/images (7).jfif" alt="Slideshow image" width="300" height="300">
-            <img id="Slideshow image" src="../Assets/images (8).jfif" alt="Slideshow image" width="300" height="300">
-            <img id="Slideshow image" src="../Assets/images (9).jfif" alt="Slideshow image" width="300" height="300">
-        </section>
-    </main>
+  <!-- Header -->
+  <header>
+    <h1>Lethi'Moto Carwash Gallery</h1>
+    <p>Enjoy a slideshow showcasing Lethi'Moto's Carwash services</p>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section id="gallery">
+      <img src="../Assets/images (4).jfif" alt="Car cleaning service 1">
+      <img src="../Assets/images (5).jfif" alt="Car cleaning service 2">
+      <img src="../Assets/images (6).jfif" alt="Car cleaning service 3">
+      <img src="../Assets/images (7).jfif" alt="Car cleaning service 4">
+      <img src="../Assets/images (8).jfif" alt="Car cleaning service 5">
+      <img src="../Assets/images (9).jfif" alt="Car cleaning service 6">
+    </section>
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div id="lightboxModal">
+    <span id="closeLightbox">&times;</span>
+    <img id="lightboxImage" src="" alt="Expanded gallery image">
+  </div>
+
+  <!-- Back to top button -->
+  <button id="backToTop" title="Go to top">⬆ Back to Top</button>
+
+  <footer>
+    <p>&copy; 2025 Lethi'Moto Carwash | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    // Active nav link
+    const currentPage = window.location.pathname.split("/").pop();
+    document.querySelectorAll("nav a").forEach(link => {
+      if(link.getAttribute("href").includes(currentPage)){
+        link.classList.add("active");
+      }
+    });
+
+    // Back to top button
+    const backToTopBtn = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+    backToTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+    // Lightbox functionality
+    const galleryImages = document.querySelectorAll("#gallery img");
+    const modal = document.getElementById("lightboxModal");
+    const lightboxImg = document.getElementById("lightboxImage");
+    const closeBtn = document.getElementById("closeLightbox");
+
+    galleryImages.forEach(img => {
+      img.addEventListener("click", () => {
+        modal.style.display = "flex";
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+      });
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    // Close modal on outside click
+    modal.addEventListener("click", e => {
+      if(e.target === modal){
+        modal.style.display = "none";
+      }
+    });
+
+    // Optional: welcome alert once per session
+    if(!sessionStorage.getItem("galleryVisited")){
+      alert("Welcome to Lethi'Moto Gallery! 🚗✨");
+      sessionStorage.setItem("galleryVisited", "true");
+    }
+  </script>
 </body>
 </html>

@@ -1,91 +1,198 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Lethi'Moto Carwash</title>
-    <link rel="stylesheet" href="../CSS/style.css"
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Contact Lethi'Moto Carwash | Get in Touch</title>
+  <meta name="description" content="Contact Lethi'Moto Carwash in Limpopo. Call, WhatsApp, or send a message using our contact form for car cleaning services." />
+  <meta name="keywords" content="Lethi'Moto Carwash, Contact, Car cleaning, Car wash services, Limpopo, WhatsApp, Phone" />
+  <meta name="author" content="Lethi'Moto Carwash" />
+
+  <!-- Open Graph for Social Sharing -->
+  <meta property="og:title" content="Contact Lethi'Moto Carwash" />
+  <meta property="og:description" content="Get in touch with Lethi'Moto Carwash in Limpopo for car cleaning services." />
+  <meta property="og:image" content="../Assets/65fd8fca49072e63b7ead056_localcarwash_website_18.webp" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourwebsite.com/Pages/contact.html" />
+
+  <link rel="stylesheet" href="../CSS/style.css" />
+  <style>
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      table, td, th {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    #backToTop {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 1000;
+      padding: 10px 15px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+    }
+  </style>
 </head>
 <body>
-     <!--Navigation Menu-->
-    <nav>
-        <ul>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="./contact.html" class="active">Contact</a></li>
+      <li><a href="./gallery.html">Gallery</a></li>
+      <li><a href="./services.html">Services</a></li>
+      <li><a href="./Enquiry.html">Enquiry</a></li>
+    </ul>
+  </nav>
 
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-        <li><a href="./gallery.html">Gallery</a></li>
-        <li><a href="./services.html">Services</a></li>
-        
-        </ul>
-    </nav>
+  <!-- Header -->
+  <header>
+    <h1>Contact Lethi'Moto Carwash</h1>
+  </header>
 
-    <header>
-        <!--Contact-->
-        <h1>Contact Lethi'Moto Carwash </h1>
-    </header>
-    <main>
-        <!--Contact Information-->
-        <section id="contact">
-            <h3>Contact Lethi'Moto Carwash</h3>
-            <table>
-                 <tr>
-                    <td width="100">Physical Address:</td>
-                    <td width="200">Lethi Moto Carwash<br>816 Unnamed Road<br>Nobody 0727</td>
-                 </tr>
-            </table>
-            <table>
-                <tr>
-                   <td width="100">Whatsapp/Call</td>
-                   <td width="200">0630672750<br>0748555533</td>
-                </tr>
-           </table>
+  <!-- Main Content -->
+  <main>
+    <!-- Contact Info -->
+    <section id="contact-info">
+      <h2>Contact Information</h2>
+      <p><strong>Address:</strong> 816 Unnamed Road, Nobody 0727</p>
+      <p><strong>WhatsApp/Call:</strong> 0630672750 / 0748555533</p>
+      <p><strong>Business Hours:</strong> Mon-Sat: 8:00 - 19:00 | Sun: 13:00 - 19:00 | Public Holidays: Closed</p>
+    </section>
 
-        </section>
-        <!--Contact Form-->
-        <section>
-            <h3>Contact Us</h3>
-            <table>
-                <tr>
-                    <td width="100"Name:></td>
-                    <td><input type="text" name="name" placeholder="Enter your name" required></td>
-                </tr>
-                <tr>
-                    <td width="100"Email:></td>
-                    <td><input type="text" name="email" placeholder="Enter your email"required></td>
-                </tr>
-                <tr>
-                    <td width="100"Message:></td>
-                    <td>
-                        <textarea rows="5" cols="25"></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="100"></td>
-                    <td><input type="submit" name="button" value="submit"></td>
-                </tr>
-            </table>
-        </section>
-        <!--Working Times-->
-        <section id="hours">
-            <h3>Business Hours</h3>
-            <p>Monday to Saturday: 8:00 AM - 19:00 PM</p>
-            <p>Sundays: 13:00 PM - 19:00 PM</p>
-            <p>Public Holidays: Closed</p>
-        </section>
+    <!-- Contact Form -->
+    <section id="contact-form">
+      <h2>Send Us a Message</h2>
+      <form id="contactUsForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required />
 
-        <!--Map Location-->
-        <section id="map">
-            <h3>Find Us</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.993457127107!2d29.669807!3d-23.8898507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec6cf14e6a13d85%3A0x3a97b53ecaca4da6!2sPhela%20Carwash%20%26%20Chisanyama!5e0!3m2!1sen!2sie!4v1755854303575!5m2!1sen!2sie">
-            </iframe>
-        </section>
-    </main>
-    <footer>
-        <p>
-            &copy;2025 Lethi'Moto Carwash
-       </p>
-    </footer>
-    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+      <p id="formFeedback" style="color:green; font-weight:bold; display:none;">Thank you! Your message has been sent.</p>
+    </section>
+
+    <!-- Map -->
+    <section id="map">
+      <h2>Find Us</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.993457127107!2d29.669807!3d-23.8898507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec6cf14e6a13d85%3A0x3a97b53ecaca4da6!2sPhela%20Carwash%20%26%20Chisanyama!5e0!3m2!1sen!2sie!4v1755854303575!5m2!1sen!2sie" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Lethi'Moto Carwash | All Rights Reserved</p>
+    <button id="backToTop" title="Go to top">⬆ Back to Top</button>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Active nav highlighting
+    const currentPage = window.location.pathname.split("/").pop();
+    document.querySelectorAll("nav a").forEach(link => {
+      if(link.getAttribute("href").includes(currentPage)){
+        link.classList.add("active");
+      }
+    });
+
+    // Back to top button
+    const backToTopBtn = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+    backToTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+    // Welcome message once per session
+    if(!sessionStorage.getItem("contactVisited")) {
+      alert("👋 Welcome to Lethi'Moto Contact Page! Reach out to us for car cleaning services.");
+      sessionStorage.setItem("contactVisited", "true");
+    }
+
+    // Form validation and submit
+    const form = document.getElementById("contactUsForm");
+    const feedback = document.getElementById("formFeedback");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      // Simple validation
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+      if(name === "" || email === "" || message === "") {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      if(!email.match(emailPattern)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+
+      // Display feedback
+      feedback.style.display = "block";
+
+      // Reset form
+      form.reset();
+
+      // Optional: hide feedback after 5 seconds
+      setTimeout(() => { feedback.style.display = "none"; }, 5000);
+    });
+  </script>
 </body>
 </html>

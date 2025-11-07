@@ -107,3 +107,17 @@ footer {
     font-size: 15px;
   }
 }
+/* Highlight active menu item */
+nav a.active {
+  color: #fff;
+  background-color: #2a9d8f;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+/* Optional: smooth hover effect */
+nav a:hover {
+  background-color: #21867a;
+  color: #fff;
+}

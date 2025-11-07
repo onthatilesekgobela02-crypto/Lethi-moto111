@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Enquire | Lethi'Moto Carwash</title>
+  <meta name="description" content="Submit your enquiries to Lethi'Moto Carwash. We are happy to answer questions about our services, pricing, and more.">
+  <meta name="keywords" content="Lethi'Moto Carwash, Enquiry, Contact, Carwash Services, Limpopo">
+  <meta name="author" content="Lethi'Moto Carwash">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Enquire | Lethi'Moto Carwash">
+  <meta property="og:description" content="Submit your enquiries to Lethi'Moto Carwash. We are happy to answer questions about our services, pricing, and more.">
+  <meta property="og:image" content="../Assets/65fd8fca49072e63b7ead056_localcarwash_website_18.webp">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourwebsite.com/Pages/enquiry.html">
+  
+  <link rel="stylesheet" href="../CSS/style.css">
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      padding: 10px 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a.active {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    input, textarea, button {
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #formFeedback {
+      display: none;
+      color: green;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    #backToTop {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 1000;
+      padding: 10px 15px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="./services.html">Services</a></li>
+      <li><a href="./gallery.html">Gallery</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+      <li><a href="./enquiry.html" class="active">Enquiry</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <h1>Lethi'Moto Carwash Enquiry</h1>
+    <h2>We’d love to hear from you!</h2>
+    <p style="text-align:center;">Fill out the form below to ask any questions or request more information about our services.</p>
+
+    <form id="enquiryForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+      <label for="enquiry">Your Enquiry:</label>
+      <textarea id="enquiry" name="enquiry" rows="5" placeholder="Write your enquiry here..." required></textarea>
+
+      <button type="submit">Submit Enquiry</button>
+    </form>
+
+    <p id="formFeedback">Thank you! Your enquiry has been submitted successfully.</p>
+  </main>
+
+  <!-- Back to top button -->
+  <button id="backToTop" title="Go to top">⬆ Back to Top</button>
+
+  <!-- Footer -->
+  <footer style="text-align:center; margin-top:30px;">
+    <p>&copy; 2025 Lethi'Moto Carwash | All Rights Reserved</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Active nav highlighting
+    const currentPage = window.location.pathname.split("/").pop();
+    document.querySelectorAll("nav a").forEach(link => {
+      if(link.getAttribute("href").includes(currentPage)){
+        link.classList.add("active");
+      }
+    });
+
+    // Back to top button
+    const backToTopBtn = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+    backToTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+    // Welcome message once per session
+    if(!sessionStorage.getItem("enquiryVisited")) {
+      alert("👋 Welcome to Lethi'Moto Enquiry Page! Ask us anything about our services.");
+      sessionStorage.setItem("enquiryVisited", "true");
+    }
+
+    // Form validation and submission
+    const form = document.getElementById("enquiryForm");
+    const feedback = document.getElementById("formFeedback");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const enquiry = document.getElementById("enquiry").value.trim();
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+      if(name === "" || email === "" || phone === "" || enquiry === ""){
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      if(!email.match(emailPattern)){
+        alert("Please enter a valid email address.");
+        return;
+      }
+
+      // Show feedback message
+      feedback.style.display = "block";
+
+      // Reset form
+      form.reset();
+
+      // Hide feedback after 5 seconds
+      setTimeout(() => { feedback.style.display = "none"; }, 5000);
+    });
+  </script>
+</body>
+</html>

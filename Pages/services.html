@@ -1,89 +1,211 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lethi'Moto Carwash Services</title>
-   <link rel="stylesheet" href="../CSS/style.css"
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Lethi'Moto Carwash | Services & Book a Wash</title>
+  <meta name="description" content="Book your next car wash at Lethi'Moto! Choose from full washes, window services, or interior detailing. Affordable and professional." />
+  <meta name="keywords" content="Lethi'Moto carwash booking, book a wash, car detailing, carwash services, Limpopo carwash, auto cleaning" />
+  <meta name="author" content="Lethi'Moto Carwash" />
+
+  <!-- Social Sharing -->
+  <meta property="og:title" content="Book Your Car Wash | Lethi'Moto Carwash" />
+  <meta property="og:description" content="Quick and easy booking at Lethi'Moto Carwash. For a good, good wash!" />
+  <meta property="og:image" content="../Assets/download (1).jfif" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourwebsite.com/Pages/services.html" />
+
+  <link rel="stylesheet" href="../CSS/style.css" />
 </head>
 <body>
-    <!--Navigation Menu-->
-    <nav>
-        <ul>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="./services.html" class="active">Services</a></li>
+      <li><a href="./gallery.html">Gallery</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+      <li><a href="./Enquiry.html">Enquiry</a></li>
+    </ul>
+  </nav>
 
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-        <li><a href="./gallery.html">Gallery</a></li>
-        <li><a href="./services.html">Services</a></li>
+  <!-- Header -->
+  <header>
+    <section id="hero">
+      <img src="../Assets/download (1).jfif" alt="Lethi'Moto Carwash Logo" width="500" height="500" />
+      <h1>Lethi'Moto Carwash Services</h1>
+      <p>We offer premium car care — from full washes to window tinting and aftercare products. Choose your service and book your wash below!</p>
+    </section>
+  </header>
 
-        </ul>
-    </nav>
+  <!-- Filter Buttons -->
+  <section class="filter-buttons" style="text-align:center; margin:20px 0;">
+    <button onclick="filterServices('all')">All</button>
+    <button onclick="filterServices('carwash')">Carwash</button>
+    <button onclick="filterServices('windows')">Windows</button>
+    <button onclick="filterServices('aftercare')">Aftercare</button>
+    <button onclick="filterServices('seats')">Seats & Mats</button>
+  </section>
 
-    <header>
-        <!--Logo-->
-        <section id="carwash" >
-            <img src="/Assets/download (1).jfif" width="500" height="500">
-        </section>
-    </header>
-    
-     <header>
-        <!--Services-->
-        <h1>Lethi'Moto Carwash Services</h1>
-        <p>
-            Here at Lethi'Moto we provide many services apart from just carwashing.Take a look at our services, and choose one
-            that suits you best.
-        </p>
-     </header>
-     <main>
-        <!--Carwash-->
-        <section id="carwash">
-            <h2>Carwash Services</h2>
-            <li> Full Carwash R90</li>
-            <li>Car Tire Wash R70</li>
-            <li>Half Carwash R65</li>
-        </section>
+  <!-- Services -->
+  <main>
+    <section id="carwash" class="service-category">
+      <h2>Carwash Services</h2>
+      <ul>
+        <li>Full Carwash - <strong>R90</strong></li>
+        <li>Car Tire Wash - <strong>R70</strong></li>
+        <li>Half Carwash - <strong>R65</strong></li>
+      </ul>
+    </section>
 
-        <!--Windows-->
-        <section id="windows">
-            <h3>Window Services</h3>
-            <li>New Car Windows Installation R300</li>
-            <li>Tinted Windows Installation R600</li>
-            <li>Full Windows wash R120</li>
-        </section>
+    <section id="windows" class="service-category">
+      <h2>Window Services</h2>
+      <ul>
+        <li>New Car Windows Installation - <strong>R300</strong></li>
+        <li>Tinted Windows Installation - <strong>R600</strong></li>
+        <li>Full Windows Wash - <strong>R120</strong></li>
+      </ul>
+    </section>
 
-        <!--Carwash AfterCare Materials-->
-        <section id="aftercare">
-            <h4>AfterCare Supplies</h4>
-            <li>Window Spray Cleaner R45</li>
-            <li>Car Air Freshner R50</li>
-            <li>Tire Polish R100</li>
-            <li>Leather Seat Polisher R180</li>
-        </section>
+    <section id="aftercare" class="service-category">
+      <h2>Aftercare Supplies</h2>
+      <ul>
+        <li>Window Spray Cleaner - <strong>R45</strong></li>
+        <li>Car Air Freshener - <strong>R50</strong></li>
+        <li>Tire Polish - <strong>R100</strong></li>
+        <li>Leather Seat Polisher - <strong>R180</strong></li>
+      </ul>
+    </section>
 
-        <!--Seats and Mats-->
-        <section id="seats and mats">
-            <h4>Seats and Mats Care</h4>
-            <li>Super wash seats and mats combo R280</li>
-            <li>Basic wash seats and mats combo R230</li>
-            <li>Seats and Mats spray cleaner combo R300</li>
-        </section>
+    <section id="seats" class="service-category">
+      <h2>Seats & Mats Care</h2>
+      <ul>
+        <li>Super Wash Combo - <strong>R280</strong></li>
+        <li>Basic Wash Combo - <strong>R230</strong></li>
+        <li>Spray Cleaner Combo - <strong>R300</strong></li>
+      </ul>
+    </section>
 
-        <p style="font-size: small;" style="font-family: 'Times New Roman', Times, serif;">
-           All Cars Get Free Parking And They Will Be Taken Care Of If Left By Owner.
-        </p>
-        <footer style="text-align: center;">
-            <section id="Social Media">
-                <h2>Follow Lethi'Moto Carwash</h2>
-                <p>
-                <a href="https://www.tiktok.com/@limpopo.explore/video/7355417578963078405?is_from_webapp=1&sender_device=pc ">TikTok</a> 
-                <a href="../Assets/Instagram.html">Instagram</a>
-                <a href="../Assets/Facebook.html">Facebook</a>
-                </p>
-                <p>
-                    &copy;2025 Lethi'Moto Carwash
-                </p>
-            </section>
-        </footer>
+    <p style="font-style: italic; text-align: center; margin-top: 20px;">
+      All cars get free parking and full care while left at Lethi'Moto.
+    </p>
+
+    <!-- 🧽 BOOK A WASH FORM -->
+    <section id="booking" style="margin: 40px auto; text-align: center; max-width: 500px;">
+      <h2>Book a Wash</h2>
+      <p>Fill in the form below to schedule your car wash appointment.</p>
+
+      <form id="bookingForm" style="display: flex; flex-direction: column; gap: 10px; text-align: left;">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="e.g. 0712345678" required pattern="[0-9]{10}" />
+
+        <label for="service">Select Service:</label>
+        <select id="service" name="service" required>
+          <option value="">-- Choose a Service --</option>
+          <option value="Full Carwash">Full Carwash - R90</option>
+          <option value="Tire Wash">Car Tire Wash - R70</option>
+          <option value="Half Carwash">Half Carwash - R65</option>
+          <option value="Window Wash">Full Windows Wash - R120</option>
+          <option value="Super Wash Combo">Super Wash Combo - R280</option>
+        </select>
+
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date" required />
+
+        <button type="submit" id="submitBtn">Submit Booking</button>
+      </form>
+
+      <!-- Confirmation message -->
+      <p id="confirmationMessage" style="color: green; font-weight: bold; display: none; margin-top: 15px;">
+        ✅ Your booking has been received! We'll contact you soon to confirm.
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <h3>Follow Lethi'Moto Carwash</h3>
+    <p>
+      <a href="https://www.tiktok.com/@limpopo.explore/video/7355417578963078405" target="_blank" rel="noopener">TikTok</a> |
+      <a href="../Assets/Instagram.html" target="_blank" rel="noopener">Instagram</a> |
+      <a href="../Assets/Facebook.html" target="_blank" rel="noopener">Facebook</a>
+    </p>
+    <p>&copy; 2025 Lethi'Moto Carwash | All Rights Reserved</p>
+    <button id="backToTop" title="Go to top">⬆ Back to Top</button>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Highlight current nav link
+    const currentPage = window.location.pathname.split("/").pop();
+    document.querySelectorAll("nav a").forEach((link) => {
+      if (link.getAttribute("href").includes(currentPage)) {
+        link.classList.add("active");
+      }
+    });
+
+    // Filter services by category
+    function filterServices(category) {
+      const sections = document.querySelectorAll(".service-category");
+      sections.forEach((section) => {
+        section.style.display = category === "all" || section.id.includes(category) ? "block" : "none";
+      });
+    }
+
+    // Back to top button
+    const backToTopBtn = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+    backToTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+    // Booking Form Validation
+    document.getElementById("bookingForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const service = document.getElementById("service").value;
+      const date = document.getElementById("date").value;
+      const confirmation = document.getElementById("confirmationMessage");
+
+      // Validation checks
+      if (!name || !email || !phone || !service || !date) {
+        alert("⚠️ Please fill in all fields before submitting.");
+        return;
+      }
+
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      const phonePattern = /^[0-9]{10}$/;
+
+      if (!emailPattern.test(email)) {
+        alert("⚠️ Please enter a valid email address.");
+        return;
+      }
+      if (!phonePattern.test(phone)) {
+        alert("⚠️ Please enter a valid 10-digit phone number.");
+        return;
+      }
+
+      // Show success message
+      confirmation.style.display = "block";
+      this.reset();
+
+      // Optional: store booking in local storage (for demo)
+      const bookingData = { name, email, phone, service, date };
+      localStorage.setItem("latestBooking", JSON.stringify(bookingData));
+    });
+  </script>
 </body>
 </html>
