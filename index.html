@@ -27,6 +27,31 @@
     <meta name="twitter:image" content="./Assets/65fd8fca49072e63b7ead056_localcarwash_website_18.webp">
 
     <link rel="stylesheet" href="CSS/style.css">
+    <style>
+      nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      padding: 10px 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a.active {
+      text-decoration: underline;
+    }
+    </style>
 </head>
 <body>
   <!-- Header -->
@@ -83,7 +108,7 @@
 
       // Welcome message (shown once per session)
       if (!sessionStorage.getItem('visited')) {
-        alert("🚗 Welcome to Lethi'Moto Carwash! For a good, good wash!");
+        alert(" Welcome to Lethi'Moto Carwash! For a good, good wash!");
         sessionStorage.setItem('visited', 'true');
       }
 

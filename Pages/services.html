@@ -19,6 +19,31 @@
   <meta property="og:url" content="https://yourwebsite.com/Pages/services.html" />
 
   <link rel="stylesheet" href="../CSS/style.css" />
+<style>
+  nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      padding: 10px 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a.active {
+      text-decoration: underline;
+    }
+</style>
 </head>
 <body>
   <!-- Navigation -->
@@ -94,7 +119,7 @@
       All cars get free parking and full care while left at Lethi'Moto.
     </p>
 
-    <!-- 🧽 BOOK A WASH FORM -->
+    <!--  BOOK A WASH FORM -->
     <section id="booking" style="margin: 40px auto; text-align: center; max-width: 500px;">
       <h2>Book a Wash</h2>
       <p>Fill in the form below to schedule your car wash appointment.</p>
@@ -127,7 +152,7 @@
 
       <!-- Confirmation message -->
       <p id="confirmationMessage" style="color: green; font-weight: bold; display: none; margin-top: 15px;">
-        ✅ Your booking has been received! We'll contact you soon to confirm.
+         Your booking has been received! We'll contact you soon to confirm.
       </p>
     </section>
   </main>
@@ -190,11 +215,11 @@
       const phonePattern = /^[0-9]{10}$/;
 
       if (!emailPattern.test(email)) {
-        alert("⚠️ Please enter a valid email address.");
+        alert(" Please enter a valid email address.");
         return;
       }
       if (!phonePattern.test(phone)) {
-        alert("⚠️ Please enter a valid 10-digit phone number.");
+        alert(" Please enter a valid 10-digit phone number.");
         return;
       }
 
