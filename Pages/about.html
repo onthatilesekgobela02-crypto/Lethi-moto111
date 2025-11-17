@@ -118,7 +118,7 @@
   <!-- Header -->
   <header>
     <section id="hero">
-      <img src="../Assets/65fd8fca49072e63b7ead056_localcarwash_website_18.webp" alt="Lethi'Moto Carwash Logo" width="500" height="500" />
+      <img src="../Assets/logo image.webp" alt="Lethi'Moto Carwash Logo" width="500" height="500" />
     </section>
   </header>
 
@@ -155,12 +155,15 @@
       <h2>Meet Our Team</h2>
       <div class="team-container">
         <div class="team-member-box">
-          <img src="../Assets/images (1).jfif" alt="Phineus Masela and Lethabo Mapela" class="draggable">
+          <img src="../Assets/LethiMoto team members.jfif" alt="Phineus Masela and Lethabo Mapela" class="draggable">
           <p>Phineus Masela & Lethabo Mapela</p>
         </div>
         <div class="team-member-box">
-          <img src="../Assets/images (2).jfif" alt="Beko Dlamini" class="draggable">
+          <img src="../Assets/LethiMoto team member.jfif" alt="Beko Dlamini" class="draggable">
           <p>Beko Dlamini</p>
+        </div>
+        <div class="team-member-box">
+          <img src="../Assets/Team leader.jfif" alt="Lesedi Kganya" class="draggable">
         </div>
       </div>
     </section>
@@ -195,11 +198,6 @@
     });
     backToTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
-    // Welcome message (only once per session)
-    if (!sessionStorage.getItem("aboutVisited")) {
-      alert(" Welcome to Lethi'Moto! Learn more about our story and team.");
-      sessionStorage.setItem("aboutVisited", "true");
-    }
 
     // Draggable images with touch support
     const draggableImages = document.querySelectorAll(".draggable");

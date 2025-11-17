@@ -181,12 +181,6 @@
     });
     backToTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
-    // Welcome message once per session
-    if(!sessionStorage.getItem("enquiryVisited")) {
-      alert(" Welcome to Lethi'Moto Enquiry Page! Ask us anything about our services.");
-      sessionStorage.setItem("enquiryVisited", "true");
-    }
-
     // Form validation and submission
     const form = document.getElementById("enquiryForm");
     const feedback = document.getElementById("formFeedback");

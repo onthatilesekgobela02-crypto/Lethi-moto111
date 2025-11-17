@@ -178,11 +178,6 @@
     });
     backToTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
-    // Welcome message once per session
-    if(!sessionStorage.getItem("contactVisited")) {
-      alert("👋 Welcome to Lethi'Moto Contact Page! Reach out to us for car cleaning services.");
-      sessionStorage.setItem("contactVisited", "true");
-    }
 
     // Form validation and submit
     const form = document.getElementById("contactUsForm");
