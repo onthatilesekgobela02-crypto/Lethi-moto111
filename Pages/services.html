@@ -5,97 +5,105 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- SEO Meta Tags -->
   <title>Lethi'Moto Carwash | Services & Book a Wash</title>
-
   <meta name="description" content="Book your next car wash at Lethi'Moto! Choose from full washes, window services, or interior detailing. Affordable and professional.">
+  <meta name="keywords" content="Lethi'Moto carwash booking, car detailing, carwash services, Limpopo carwash">
+  <meta name="author" content="Lethi'Moto Carwash">
 
   <link rel="stylesheet" href="../CSS/style.css">
 
   <style>
-    /* Center Logo */
-    #hero img {
-      display: block;
-      margin: 0 auto;
-      width: 280px;
-      max-width: 90%;
-    }
-
+    /* Navigation styling */
     nav ul {
       list-style: none;
       display: flex;
       justify-content: center;
-      background: #222;
-      padding: 10px;
-      flex-wrap: wrap;
+      background: #333;
+      padding: 10px 0;
       margin: 0;
+      flex-wrap: wrap;
     }
-    nav ul li {
-      margin: 0 15px;
-    }
+    nav ul li { margin: 0 15px; }
     nav ul li a {
-      color: white;
+      color: #fff;
       text-decoration: none;
       font-weight: bold;
       font-size: 16px;
     }
+    nav ul li a.active { text-decoration: underline; }
 
-    /* Remove bullets + professional styling */
+    /* Hero Section */
+    #hero img {
+      display: block;
+      margin: 0 auto;
+      width: 500px;
+      height: 500px;
+      max-width: 90%;
+    }
+    #hero h1, #hero p { text-align: center; margin: 10px 0; }
+
+    /* Service List Styling */
     .service-category ul {
       list-style: none;
       padding: 0;
-      margin: 0;
+      margin: 0 auto;
+      max-width: 500px;
     }
     .service-category ul li {
-      padding: 10px;
-      margin: 6px auto;
+      padding: 12px;
+      margin: 8px 0;
       background: #f5f5f5;
       border-radius: 6px;
-      width: 90%;
-      max-width: 500px;
       text-align: center;
       font-size: 18px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
+    .service-category h2 { text-align: center; margin-bottom: 15px; }
 
     /* Booking Form */
-    #bookingForm input, 
-    #bookingForm select {
-      padding: 10px;
+    #booking {
+      max-width: 500px;
+      margin: 40px auto;
+      text-align: center;
+    }
+    #booking input, #booking select {
       width: 100%;
+      padding: 10px;
+      margin: 8px 0;
       border-radius: 6px;
       border: 1px solid #888;
       font-size: 16px;
+      box-sizing: border-box;
     }
     #submitBtn {
       padding: 12px;
+      margin-top: 10px;
       background: #333;
-      color: white;
+      color: #fff;
       border: none;
       border-radius: 6px;
       cursor: pointer;
       font-size: 18px;
-      margin-top: 10px;
     }
-    #submitBtn:hover {
-      background: #555;
-    }
+    #submitBtn:hover { background: #555; }
 
-    /* Back to top button */
+    /* Back to Top Button */
     #backToTop {
       display: none;
       position: fixed;
       bottom: 30px;
       right: 30px;
       padding: 12px 18px;
-      background: #222;
+      background: #333;
       color: #fff;
       border: none;
       border-radius: 6px;
       cursor: pointer;
+      z-index: 1000;
     }
   </style>
 </head>
-
 <body>
 
   <!-- Navigation -->
@@ -110,19 +118,14 @@
     </ul>
   </nav>
 
-    <!-- Header -->
-<header>
-  <section id="hero">
-    <img src="../Assets/logo image.webp" 
-         alt="Lethi'Moto Carwash Logo" 
-         class="hero-logo"
-         width="500"
-         height="500">
-
-    <h1>Lethi'Moto Carwash Services</h1>
-    <p>We offer premium car care — from full washes to window tinting and aftercare products. Choose your service and book your wash below!</p>
-  </section>
-</header>
+  <!-- Header -->
+  <header>
+    <section id="hero">
+      <img src="../Assets/logo image.webp" alt="Lethi'Moto Carwash Logo">
+      <h1>Lethi'Moto Carwash Services</h1>
+      <p>We offer premium car care — from full washes to window tinting and aftercare products. Choose your service and book your wash below!</p>
+    </section>
+  </header>
 
   <!-- Filter Buttons -->
   <section style="text-align:center; margin:20px 0;">
@@ -136,7 +139,7 @@
   <!-- Services -->
   <main>
     <section id="carwash" class="service-category">
-      <h2 style="text-align:center;">Carwash Services</h2>
+      <h2>Carwash Services</h2>
       <ul>
         <li>Full Carwash - <strong>R90</strong></li>
         <li>Car Tire Wash - <strong>R70</strong></li>
@@ -145,7 +148,7 @@
     </section>
 
     <section id="windows" class="service-category">
-      <h2 style="text-align:center;">Window Services</h2>
+      <h2>Window Services</h2>
       <ul>
         <li>New Car Windows Installation - <strong>R300</strong></li>
         <li>Tinted Windows Installation - <strong>R600</strong></li>
@@ -154,7 +157,7 @@
     </section>
 
     <section id="aftercare" class="service-category">
-      <h2 style="text-align:center;">Aftercare Supplies</h2>
+      <h2>Aftercare Supplies</h2>
       <ul>
         <li>Window Spray Cleaner - <strong>R45</strong></li>
         <li>Car Air Freshener - <strong>R50</strong></li>
@@ -164,7 +167,7 @@
     </section>
 
     <section id="seats" class="service-category">
-      <h2 style="text-align:center;">Seats & Mats Care</h2>
+      <h2>Seats & Mats Care</h2>
       <ul>
         <li>Super Wash Combo - <strong>R280</strong></li>
         <li>Basic Wash Combo - <strong>R230</strong></li>
@@ -172,25 +175,17 @@
       </ul>
     </section>
 
-    <p style="text-align:center; margin-top:30px; font-style:italic;">
+    <p style="text-align:center; margin-top:20px; font-style:italic;">
       All cars get free parking and full care while left at Lethi'Moto.
     </p>
 
     <!-- Booking Form -->
-    <section id="booking" style="max-width:500px; margin:40px auto;">
-      <h2 style="text-align:center;">Book a Wash</h2>
-
+    <section id="booking">
+      <h2>Book a Wash</h2>
       <form id="bookingForm">
-        <label>Full Name:</label>
-        <input type="text" id="name" placeholder="Enter your name">
-
-        <label>Email Address:</label>
-        <input type="email" id="email" placeholder="Enter your email">
-
-        <label>Phone Number:</label>
-        <input type="tel" id="phone" placeholder="0712345678">
-
-        <label>Select Service:</label>
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="email" id="email" placeholder="Email Address">
+        <input type="tel" id="phone" placeholder="Phone Number">
         <select id="service">
           <option value="">-- Choose a Service --</option>
           <option>Full Carwash - R90</option>
@@ -199,15 +194,10 @@
           <option>Full Windows Wash - R120</option>
           <option>Super Wash Combo - R280</option>
         </select>
-
-        <label>Preferred Date:</label>
         <input type="date" id="date">
-
-        <button id="submitBtn" type="submit">Submit Booking</button>
+        <button type="submit" id="submitBtn">Submit Booking</button>
       </form>
-
-      <p id="confirmationMessage" 
-         style="color:green; font-weight:bold; margin-top:15px; display:none;">
+      <p id="confirmationMessage" style="color:green; font-weight:bold; margin-top:15px; display:none;">
         Your booking has been received! We'll contact you soon.
       </p>
     </section>
@@ -225,16 +215,16 @@
     <button id="backToTop">⬆ Back to Top</button>
   </footer>
 
+  <!-- JavaScript -->
   <script>
-    // Fix filter system
+    // Filter Services
     function filterServices(category) {
       document.querySelectorAll(".service-category").forEach(sec => {
-        sec.style.display =
-          category === "all" || sec.id === category ? "block" : "none";
+        sec.style.display = (category === "all" || sec.id === category) ? "block" : "none";
       });
     }
 
-    // Back to top button
+    // Back to Top
     const backBtn = document.getElementById("backToTop");
     window.addEventListener("scroll", () => {
       backBtn.style.display = window.scrollY > 300 ? "block" : "none";
@@ -242,35 +232,35 @@
     backBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
     // Booking Form Validation
-    document.getElementById("bookingForm").addEventListener("submit", function(e) {
+    document.getElementById("bookingForm").addEventListener("submit", function(e){
       e.preventDefault();
-
       const name = document.getElementById("name").value.trim();
       const email = document.getElementById("email").value.trim();
       const phone = document.getElementById("phone").value.trim();
       const service = document.getElementById("service").value.trim();
       const date = document.getElementById("date").value;
-      const message = document.getElementById("confirmationMessage");
+      const confirmation = document.getElementById("confirmationMessage");
 
-      if (!name || !email || !phone || !service || !date) {
+      if(!name || !email || !phone || !service || !date){
         alert("Please fill in all fields.");
         return;
       }
-
-      if (!/^[0-9]{10}$/.test(phone)) {
+      if(!/^[0-9]{10}$/.test(phone)){
         alert("Enter a valid 10-digit phone number.");
         return;
       }
-
-      if (!/^[^ ]+@[^ ]+\.[a-z]{2,4}$/i.test(email)) {
+      if(!/^[^ ]+@[^ ]+\.[a-z]{2,4}$/i.test(email)){
         alert("Enter a valid email address.");
         return;
       }
 
-      message.style.display = "block";
+      confirmation.style.display = "block";
       this.reset();
     });
   </script>
+
+<script src="../validate.js"></script>
+<script src="../accordian.js"></script>
 
 </body>
 </html>

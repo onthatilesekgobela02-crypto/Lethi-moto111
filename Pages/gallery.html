@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lethi'Moto Carwash Gallery | See Our Work</title>
 
   <!-- SEO Meta Tags -->
+  <title>Lethi'Moto Carwash Gallery | See Our Work</title>
   <meta name="description" content="Browse Lethi'Moto Carwash Gallery showcasing our car cleaning and detailing services in Limpopo.">
   <meta name="keywords" content="Lethi'Moto Carwash, Gallery, Carwash Services, Car Cleaning, Limpopo">
   <meta name="author" content="Lethi'Moto Carwash">
@@ -22,6 +22,41 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      padding: 10px 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a.active {
+      text-decoration: underline;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+    header img {
+      width: 500px;
+      height: 500px;
+      max-width: 90%;
+      display: block;
+      margin: 0 auto;
     }
 
     main {
@@ -77,6 +112,7 @@
       cursor: pointer;
     }
 
+    /* Back to top button */
     #backToTop {
       display: none;
       position: fixed;
@@ -87,28 +123,12 @@
       font-size: 18px;
       cursor: pointer;
     }
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      background-color: #333;
-      padding: 10px 0;
-      margin: 0;
-      flex-wrap: wrap;
-    }
 
-    nav ul li {
-      margin: 0 15px;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav ul li a.active {
-      text-decoration: underline;
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f4f4f4;
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -118,17 +138,18 @@
     <ul>
       <li><a href="../index.html">Home</a></li>
       <li><a href="./about.html">About</a></li>
-      <li><a href="./contact.html">Contact</a></li>
-      <li><a href="./gallery.html" class="active">Gallery</a></li>
       <li><a href="./services.html">Services</a></li>
+      <li><a href="./gallery.html" class="active">Gallery</a></li>
+      <li><a href="./contact.html">Contact</a></li>
       <li><a href="./Enquiry.html">Enquiry</a></li>
     </ul>
   </nav>
 
   <!-- Header -->
   <header>
+    <img src="../Assets/logo image.webp" alt="Lethi'Moto Carwash Logo">
     <h1>Lethi'Moto Carwash Gallery</h1>
-    <p>Enjoy a slideshow showcasing Lethi'Moto's Carwash services</p>
+    <p>Enjoy a slideshow showcasing Lethi'Moto's carwash services</p>
   </header>
 
   <!-- Main Content -->
@@ -156,12 +177,13 @@
   <!-- Back to top button -->
   <button id="backToTop" title="Go to top">⬆ Back to Top</button>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Lethi'Moto Carwash | All Rights Reserved</p>
   </footer>
 
   <script>
-    // Active nav link
+    // Highlight active nav link
     const currentPage = window.location.pathname.split("/").pop();
     document.querySelectorAll("nav a").forEach(link => {
       if(link.getAttribute("href").includes(currentPage)){
@@ -194,13 +216,18 @@
       modal.style.display = "none";
     });
 
-    // Close modal on outside click
     modal.addEventListener("click", e => {
       if(e.target === modal){
         modal.style.display = "none";
       }
     });
-
   </script>
+
+  <script src="../validate.js"></script>
+<script src="../accordian.js"></script>
+
 </body>
 </html>
+
+
+

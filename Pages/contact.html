@@ -11,72 +11,17 @@
   <meta name="keywords" content="Lethi'Moto Carwash, Contact, Car cleaning, Car wash services, Limpopo, WhatsApp, Phone" />
   <meta name="author" content="Lethi'Moto Carwash" />
 
-  <!-- Open Graph for Social Sharing -->
+  <!-- Open Graph / Social Sharing -->
   <meta property="og:title" content="Contact Lethi'Moto Carwash" />
   <meta property="og:description" content="Get in touch with Lethi'Moto Carwash in Limpopo for car cleaning services." />
   <meta property="og:image" content="../Assets/65fd8fca49072e63b7ead056_localcarwash_website_18.webp" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://yourwebsite.com/Pages/contact.html" />
 
+  <!-- Shared CSS -->
   <link rel="stylesheet" href="../CSS/style.css" />
+
   <style>
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    section {
-      margin-bottom: 30px;
-    }
-
-    input, textarea, button {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-    }
-
-    button {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
-
-    table {
-      width: 100%;
-    }
-
-    @media (max-width: 768px) {
-      table, td, th {
-        display: block;
-        width: 100%;
-      }
-    }
-
-    #backToTop {
-      display: none;
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      z-index: 1000;
-      padding: 10px 15px;
-      font-size: 18px;
-      cursor: pointer;
-    }
-
-    iframe {
-      width: 100%;
-      height: 300px;
-      border: 0;
-    }
     nav ul {
       list-style: none;
       display: flex;
@@ -86,31 +31,88 @@
       margin: 0;
       flex-wrap: wrap;
     }
-
     nav ul li {
       margin: 0 15px;
     }
-
     nav ul li a {
       color: #fff;
       text-decoration: none;
       font-weight: bold;
     }
-
     nav ul li a.active {
       text-decoration: underline;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    #backToTop {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      padding: 10px 15px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    @media (max-width: 768px) {
+      input, textarea, button {
+        font-size: 14px;
+      }
     }
   </style>
 </head>
 <body>
+
   <!-- Navigation -->
   <nav>
     <ul>
       <li><a href="../index.html">Home</a></li>
       <li><a href="./about.html">About</a></li>
       <li><a href="./contact.html" class="active">Contact</a></li>
-      <li><a href="./gallery.html">Gallery</a></li>
       <li><a href="./services.html">Services</a></li>
+      <li><a href="./gallery.html">Gallery</a></li>
       <li><a href="./Enquiry.html">Enquiry</a></li>
     </ul>
   </nav>
@@ -122,6 +124,7 @@
 
   <!-- Main Content -->
   <main>
+
     <!-- Contact Info -->
     <section id="contact-info">
       <h2>Contact Information</h2>
@@ -131,86 +134,114 @@
     </section>
 
     <!-- Contact Form -->
-    <section id="contact-form">
-      <h2>Send Us a Message</h2>
-      <form id="contactUsForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+<section id="contact-form">
+  <h2>Send Us a Message</h2>
+  <form id="contactUsForm" novalidate>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+      <small class="error-message" id="nameError"></small>
+    </div>
+    
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required />
+      <small class="error-message" id="emailError"></small>
+    </div>
+    
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+      <small class="error-message" id="messageError"></small>
+    </div>
+       
+    <button type="submit">Submit</button>
+  </form>
+  <p id="formFeedback" style="color:green; font-weight:bold; display:none; text-align:center; margin-top:10px;">
+    Thank you! Your message has been sent.
+  </p>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required />
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
-
-        <button type="submit">Submit</button>
-      </form>
-      <p id="formFeedback" style="color:green; font-weight:bold; display:none;">Thank you! Your message has been sent.</p>
-    </section>
-
-    <!-- Map -->
+   <!-- Google Map -->
     <section id="map">
       <h2>Find Us</h2>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.993457127107!2d29.669807!3d-23.8898507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec6cf14e6a13d85%3A0x3a97b53ecaca4da6!2sPhela%20Carwash%20%26%20Chisanyama!5e0!3m2!1sen!2sie!4v1755854303575!5m2!1sen!2sie" allowfullscreen="" loading="lazy"></iframe>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.993457127107!2d29.669807!3d-23.8898507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec6cf14e6a13d85%3A0x3a97b53ecaca4da6!2sPhela%20Carwash%20%26%20Chisanyama!5e0!3m2!1sen!2sie!4v1755854303575!5m2!1sen!2sie" 
+        allowfullscreen="" loading="lazy">
+      </iframe>
     </section>
+
   </main>
 
   <!-- Footer -->
   <footer>
+    <h3>Follow Lethi'Moto</h3>
+    <p>
+      <a href="https://www.tiktok.com/@limpopo.explore/video/7355417578963078405" target="_blank">TikTok</a> |
+      <a href="../Assets/Instagram.html" target="_blank">Instagram</a> |
+      <a href="../Assets/Facebook.html" target="_blank">Facebook</a>
+    </p>
     <p>&copy; 2025 Lethi'Moto Carwash | All Rights Reserved</p>
-    <button id="backToTop" title="Go to top">⬆ Back to Top</button>
+    <button id="backToTop">⬆ Back to Top</button>
   </footer>
 
-  <!-- JavaScript -->
-  <script>
-    // Active nav highlighting
-    const currentPage = window.location.pathname.split("/").pop();
-    document.querySelectorAll("nav a").forEach(link => {
-      if(link.getAttribute("href").includes(currentPage)){
-        link.classList.add("active");
-      }
-    });
+</section>
 
-    // Back to top button
-    const backToTopBtn = document.getElementById("backToTop");
-    window.addEventListener("scroll", () => {
-      backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
-    });
-    backToTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+<!-- JavaScript -->
+<script>
+  const form = document.getElementById("contactUsForm");
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const messageInput = document.getElementById("message");
 
+  const nameError = document.getElementById("nameError");
+  const emailError = document.getElementById("emailError");
+  const messageError = document.getElementById("messageError");
+  const feedback = document.getElementById("formFeedback");
 
-    // Form validation and submit
-    const form = document.getElementById("contactUsForm");
-    const feedback = document.getElementById("formFeedback");
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    let valid = true;
 
-    form.addEventListener("submit", function(e) {
-      e.preventDefault();
+    // Validate Name
+    if(nameInput.value.trim() === "" || !nameInput.value.includes(" ")) {
+      nameError.textContent = "Please enter your full name";
+      nameError.style.display = "block";
+      valid = false;
+    } else {
+      nameError.style.display = "none";
+    }
 
-      // Simple validation
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const message = document.getElementById("message").value.trim();
-      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    // Validate Email
+    const emailPattern = /\S+@\S+\.\S+/;
+    if(emailInput.value.trim() === "" || !emailPattern.test(emailInput.value)) {
+      emailError.textContent = "Email is required";
+      emailError.style.display = "block";
+      valid = false;
+    } else {
+      emailError.style.display = "none";
+    }
 
-      if(name === "" || email === "" || message === "") {
-        alert("Please fill in all fields.");
-        return;
-      }
+    // Validate Message
+    if(messageInput.value.trim().length < 10) {
+      messageError.textContent = "Message must be at least 10 characters long";
+      messageError.style.display = "block";
+      valid = false;
+    } else {
+      messageError.style.display = "none";
+    }
 
-      if(!email.match(emailPattern)) {
-        alert("Please enter a valid email address.");
-        return;
-      }
-
-      // Display feedback
+    if(valid) {
       feedback.style.display = "block";
-
-      // Reset form
       form.reset();
-
-      // Optional: hide feedback after 5 seconds
       setTimeout(() => { feedback.style.display = "none"; }, 5000);
-    });
-  </script>
+    }
+  });
+</script>
+
+<script src="../validate.js"></script>
+<script src="../accordian.js"></script>
+<script src="../contact val.js"></script>
+
+
 </body>
 </html>

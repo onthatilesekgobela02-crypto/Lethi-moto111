@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,68 +16,13 @@
   <meta property="og:description" content="Discover the story, vision, mission, and team behind Lethi'Moto Carwash in Limpopo." />
   <meta property="og:image" content="../Assets/65fd8fca49072e63b7ead056_localcarwash_website_18.webp" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yourwebsite.com/Pages/about.html" />
+  <meta property="og:url" content="https://yourwebsite.com/about.html" />
 
+  <!-- Shared CSS -->
   <link rel="stylesheet" href="../CSS/style.css" />
+
   <style>
-    /* Team section layout */
-    .team-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      margin: 20px 0;
-    }
-
-    .team-member-box {
-      position: relative;      /* container for draggable image */
-      width: 250px;
-      height: 300px;
-      text-align: center;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 10px;
-      overflow: hidden;
-      background-color: #f9f9f9;
-    }
-
-    .team-member-box img {
-      position: absolute;      /* allows dragging inside container */
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: auto;
-      max-height: 70%;
-      cursor: grab;
-      transition: transform 0.2s;
-      touch-action: none;      /* allow touch dragging */
-    }
-
-    @media (max-width: 768px) {
-      .team-container {
-        flex-direction: column;
-        align-items: center;
-      }
-      .team-member-box {
-        width: 80%;
-        height: auto;
-      }
-      .team-member-box img {
-        max-height: 60%;
-      }
-    }
-
-    /* Back to top button */
-    #backToTop {
-      display: none;
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      z-index: 1000;
-      padding: 10px 15px;
-      font-size: 18px;
-      cursor: pointer;
-    }
+    /* Shared Navigation fix */
     nav ul {
       list-style: none;
       display: flex;
@@ -86,23 +32,82 @@
       margin: 0;
       flex-wrap: wrap;
     }
-
     nav ul li {
       margin: 0 15px;
     }
-
     nav ul li a {
       color: #fff;
       text-decoration: none;
       font-weight: bold;
     }
-
     nav ul li a.active {
       text-decoration: underline;
     }
+
+    /* Page Layout */
+    #hero img {
+      display: block;
+      margin: 20px auto;
+      width: 500px;
+      height: 500px;
+      object-fit: contain;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+      line-height: 1.7;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    /* TEAM SECTION */
+    .team-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .team-member-box {
+      width: 260px;
+      height: auto;
+      background: #f8f8f8;
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+
+    .team-member-box img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      cursor: grab;
+    }
+
+    /* Back to Top Button */
+    #backToTop {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      padding: 10px 15px;
+      cursor: pointer;
+      z-index: 1000;
+    }
   </style>
+
 </head>
 <body>
+
   <!-- Navigation -->
   <nav>
     <ul>
@@ -115,26 +120,24 @@
     </ul>
   </nav>
 
-  <!-- Header -->
-  <header>
-    <section id="hero">
-      <img src="../Assets/logo image.webp" alt="Lethi'Moto Carwash Logo" width="500" height="500" />
-    </section>
+  <!-- Logo / Hero Section -->
+  <header id="hero">
+    <img src="../Assets/logo image.webp" alt="Lethi'Moto Carwash Logo">
   </header>
 
-  <!-- Main Content -->
+  <!-- MAIN CONTENT -->
   <main>
-    <!-- History -->
+
     <section id="history">
       <h1>Lethi'Moto Background</h1>
       <p>
-        Lethi'Moto was founded by three village boys in 2021 as a side hustle to provide for their families. 
-        Based in the heart of Limpopo, in a village called Nobody, Lethi'Moto aims to provide the best cleaning services for your car, 
-        using top-quality products to make your car shine for weeks. Founded by Phineus Masela (24), Lethabo Mapela (28), and Beko Dlamini (20).
+        Lethi'Moto was founded by three village boys in 2021 as a side hustle to provide for their families.
+        Based in the heart of Limpopo, in a village called Nobody, Lethi'Moto aims to provide the best cleaning
+        services for your car using top-quality products to make your car shine for weeks. Founded by
+        <strong>Phineus Masela (24)</strong>, <strong>Lethabo Mapela (28)</strong>, and <strong>Beko Dlamini (20)</strong>.
       </p>
     </section>
 
-    <!-- Vision -->
     <section id="vision">
       <h2>Our Vision</h2>
       <p>
@@ -142,117 +145,105 @@
       </p>
     </section>
 
-    <!-- Mission -->
     <section id="mission">
       <h2>Our Mission</h2>
       <p>
-        To gain more exposure and customers, ensuring all clients feel welcomed, satisfied, and leave with a clean, shiny car.
+        To gain more exposure and customers, ensuring all clients feel welcomed, satisfied,
+        and leave with a clean, shiny car.
       </p>
     </section>
 
-    <!-- Team Members -->
+    <!-- TEAM SECTION -->
     <section id="team">
       <h2>Meet Our Team</h2>
+
       <div class="team-container">
+
         <div class="team-member-box">
-          <img src="../Assets/LethiMoto team members.jfif" alt="Phineus Masela and Lethabo Mapela" class="draggable">
-          <p>Phineus Masela & Lethabo Mapela</p>
+          <img src="../Assets/LethiMoto team members.jfif" alt="Team Members Phineus Masela and Lethabo Mapela" class="draggable">
+          <p><strong>Phineus Masela & Lethabo Mapela</strong></p>
         </div>
+
         <div class="team-member-box">
-          <img src="../Assets/LethiMoto team member.jfif" alt="Beko Dlamini" class="draggable">
-          <p>Beko Dlamini</p>
+          <img src="../Assets/LethiMoto team member.jfif" alt="Team Member Beko Dlamini" class="draggable">
+          <p><strong>Beko Dlamini</strong></p>
         </div>
+
         <div class="team-member-box">
-          <img src="../Assets/Team leader.jfif" alt="Lesedi Kganya" class="draggable">
+          <img src="../Assets/Team leader.jfif" alt="Team Leader Lesedi Kganya" class="draggable">
+          <p><strong>Lesedi Kganya</strong></p>
         </div>
+
       </div>
     </section>
+
   </main>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     <h3>Follow Lethi'Moto</h3>
+
     <p>
-      <a href="https://www.tiktok.com/@limpopo.explore/video/7355417578963078405" target="_blank" rel="noopener">TikTok</a> |
-      <a href="../Assets/Instagram.html" target="_blank" rel="noopener">Instagram</a> |
-      <a href="../Assets/Facebook.html" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.tiktok.com/@limpopo.explore/video/7355417578963078405" target="_blank">TikTok</a> |
+      <a href="../Assets/Instagram.html" target="_blank">Instagram</a> |
+      <a href="../Assets/Facebook.html" target="_blank">Facebook</a>
     </p>
+
     <p>&copy; 2025 Lethi'Moto Carwash | All Rights Reserved</p>
-    <button id="backToTop" title="Go to top">⬆ Back to Top</button>
+
+    <button id="backToTop">⬆ Back to Top</button>
   </footer>
 
-  <!-- JavaScript -->
+  <!-- SCRIPT: Highlight nav, Back to top, Drag images -->
   <script>
-    // Highlight current nav link
+    // Highlight current nav item
     const currentPage = window.location.pathname.split("/").pop();
     document.querySelectorAll("nav a").forEach(link => {
-      if(link.getAttribute("href").includes(currentPage)){
+      if (link.getAttribute("href").includes(currentPage)) {
         link.classList.add("active");
       }
     });
 
-    // Back to top button
+    // Back to top logic
     const backToTopBtn = document.getElementById("backToTop");
     window.addEventListener("scroll", () => {
       backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
     });
     backToTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
-
-    // Draggable images with touch support
+    // Simple draggable images
     const draggableImages = document.querySelectorAll(".draggable");
 
     draggableImages.forEach(img => {
-      let isDragging = false, offsetX = 0, offsetY = 0;
+      let offsetX, offsetY, dragging = false;
 
-      const container = img.parentElement;
-
-      const startDrag = (clientX, clientY) => {
-        isDragging = true;
-        const rect = img.getBoundingClientRect();
-        offsetX = clientX - rect.left;
-        offsetY = clientY - rect.top;
+      img.addEventListener("mousedown", e => {
+        dragging = true;
+        offsetX = e.offsetX;
+        offsetY = e.offsetY;
         img.style.cursor = "grabbing";
-      };
-
-      const moveDrag = (clientX, clientY) => {
-        if (!isDragging) return;
-        const containerRect = container.getBoundingClientRect();
-        let left = clientX - containerRect.left - offsetX;
-        let top = clientY - containerRect.top - offsetY;
-
-        // Boundaries inside container
-        left = Math.max(0, Math.min(left, container.offsetWidth - img.offsetWidth));
-        top = Math.max(0, Math.min(top, container.offsetHeight - img.offsetHeight));
-
-        img.style.left = left + "px";
-        img.style.top = top + "px";
-      };
-
-      const endDrag = () => {
-        isDragging = false;
-        img.style.cursor = "grab";
-      };
-
-      // Mouse events
-      img.addEventListener("mousedown", e => startDrag(e.clientX, e.clientY));
-      document.addEventListener("mousemove", e => moveDrag(e.clientX, e.clientY));
-      document.addEventListener("mouseup", endDrag);
-
-      // Touch events for mobile
-      img.addEventListener("touchstart", e => {
-        const touch = e.touches[0];
-        startDrag(touch.clientX, touch.clientY);
-        e.preventDefault();
       });
-      document.addEventListener("touchmove", e => {
-        const touch = e.touches[0];
-        moveDrag(touch.clientX, touch.clientY);
-      }, { passive: false });
-      document.addEventListener("touchend", endDrag);
+
+      document.addEventListener("mousemove", e => {
+        if (dragging) {
+          img.style.position = "relative";
+          img.style.left = `${e.clientX - offsetX - img.parentElement.getBoundingClientRect().left}px`;
+          img.style.top = `${e.clientY - offsetY - img.parentElement.getBoundingClientRect().top}px`;
+        }
+      });
+
+      document.addEventListener("mouseup", () => {
+        dragging = false;
+        img.style.cursor = "grab";
+      });
     });
   </script>
+
+<script src="../validate.js"></script>
+<script src="../accordian.js"></script>
+
 </body>
 </html>
+
 
 
