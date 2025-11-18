@@ -11,7 +11,7 @@
   <meta name="keywords" content="Lethi'Moto Carwash, About, Car cleaning, Car detailing, Limpopo carwash, Team, Mission, Vision" />
   <meta name="author" content="Lethi'Moto Carwash" />
 
-  <!-- Open Graph for Social Sharing -->
+  <!-- Open Graph -->
   <meta property="og:title" content="About Lethi'Moto Carwash" />
   <meta property="og:description" content="Discover the story, vision, mission, and team behind Lethi'Moto Carwash in Limpopo." />
   <meta property="og:image" content="../Assets/65fd8fca49072e63b7ead056_localcarwash_website_18.webp" />
@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="../CSS/style.css" />
 
   <style>
-    /* Shared Navigation fix */
+    /* Navigation */
     nav ul {
       list-style: none;
       display: flex;
@@ -44,13 +44,13 @@
       text-decoration: underline;
     }
 
-    /* Page Layout */
+    /* Logo / Hero */
     #hero img {
+      width: 100%;
+      max-width: 300px;  /* Responsive size */
+      height: auto;
       display: block;
       margin: 20px auto;
-      width: 500px;
-      height: 500px;
-      object-fit: contain;
     }
 
     main {
@@ -65,7 +65,12 @@
       margin-bottom: 15px;
     }
 
-    /* TEAM SECTION */
+    /* Sections */
+    section {
+      margin-bottom: 40px;
+    }
+
+    /* Team Section */
     .team-container {
       display: flex;
       flex-wrap: wrap;
@@ -76,12 +81,16 @@
 
     .team-member-box {
       width: 260px;
-      height: auto;
       background: #f8f8f8;
       padding: 15px;
       border-radius: 12px;
       text-align: center;
       border: 1px solid #ddd;
+      transition: transform 0.3s;
+    }
+
+    .team-member-box:hover {
+      transform: translateY(-5px);
     }
 
     .team-member-box img {
@@ -90,9 +99,8 @@
       object-fit: cover;
       border-radius: 8px;
       margin-bottom: 10px;
-      cursor: grab;
     }
-    
+
     /* Back to Top Button */
     #backToTop {
       display: none;
@@ -108,8 +116,22 @@
       z-index: 1000;
     }
 
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      main {
+        padding: 10px;
+      }
+      .team-container {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .team-member-box {
+        width: 90%;
+        max-width: 260px;
+        margin: 0 auto;
+      }
+    }
   </style>
-
 </head>
 <body>
 
@@ -132,7 +154,6 @@
 
   <!-- MAIN CONTENT -->
   <main>
-
     <section id="history">
       <h1>Lethi'Moto Background</h1>
       <p>
@@ -145,61 +166,47 @@
 
     <section id="vision">
       <h2>Our Vision</h2>
-      <p>
-        To lead in the carwash industry, known for excellent service and consistent, high-quality results.
-      </p>
+      <p>To lead in the carwash industry, known for excellent service and consistent, high-quality results.</p>
     </section>
 
     <section id="mission">
       <h2>Our Mission</h2>
-      <p>
-        To gain more exposure and customers, ensuring all clients feel welcomed, satisfied,
-        and leave with a clean, shiny car.
-      </p>
+      <p>To gain more exposure and customers, ensuring all clients feel welcomed, satisfied, and leave with a clean, shiny car.</p>
     </section>
 
     <!-- TEAM SECTION -->
     <section id="team">
       <h2>Meet Our Team</h2>
-
       <div class="team-container">
-
         <div class="team-member-box">
-          <img src="../Assets/LethiMoto team members.jfif" alt="Team Members Phineus Masela and Lethabo Mapela" class="draggable">
+          <img src="../Assets/LethiMoto team members.jfif" alt="Team Members Phineus Masela and Lethabo Mapela">
           <p><strong>Phineus Masela & Lethabo Mapela</strong></p>
         </div>
-
         <div class="team-member-box">
-          <img src="../Assets/LethiMoto team member.jfif" alt="Team Member Beko Dlamini" class="draggable">
+          <img src="../Assets/LethiMoto team member.jfif" alt="Team Member Beko Dlamini">
           <p><strong>Beko Dlamini</strong></p>
         </div>
-
         <div class="team-member-box">
-          <img src="../Assets/Team leader.jfif" alt="Team Leader Lesedi Kganya" class="draggable">
+          <img src="../Assets/Team leader.jfif" alt="Team Leader Lesedi Kganya">
           <p><strong>Lesedi Kganya</strong></p>
         </div>
-
       </div>
     </section>
-
   </main>
 
   <!-- FOOTER -->
   <footer>
     <h3>Follow Lethi'Moto</h3>
-
     <p>
       <a href="../Assets/Tiktok Link.htm" target="_blank">TikTok</a> |
       <a href="../Assets/Instagram Link.htm" target="_blank">Instagram</a> |
       <a href="../Assets/Facebook Link.htm" target="_blank">Facebook</a>
     </p>
-
     <p>&copy; 2025 Lethi'Moto Carwash | All Rights Reserved</p>
-
     <button id="backToTop">⬆ Back to Top</button>
   </footer>
 
-  <!-- SCRIPT: Highlight nav, Back to top, Drag images -->
+  <!-- SCRIPT: Highlight nav, Back to top -->
   <script>
     // Highlight current nav item
     const currentPage = window.location.pathname.split("/").pop();
@@ -208,47 +215,18 @@
         link.classList.add("active");
       }
     });
-    
+
     // Back to Top
     const backBtn = document.getElementById("backToTop");
     window.addEventListener("scroll", () => {
       backBtn.style.display = window.scrollY > 300 ? "block" : "none";
     });
     backBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
-
-    // Simple draggable images
-    const draggableImages = document.querySelectorAll(".draggable");
-
-    draggableImages.forEach(img => {
-      let offsetX, offsetY, dragging = false;
-
-      img.addEventListener("mousedown", e => {
-        dragging = true;
-        offsetX = e.offsetX;
-        offsetY = e.offsetY;
-        img.style.cursor = "grabbing";
-      });
-
-      document.addEventListener("mousemove", e => {
-        if (dragging) {
-          img.style.position = "relative";
-          img.style.left = `${e.clientX - offsetX - img.parentElement.getBoundingClientRect().left}px`;
-          img.style.top = `${e.clientY - offsetY - img.parentElement.getBoundingClientRect().top}px`;
-        }
-      });
-
-      document.addEventListener("mouseup", () => {
-        dragging = false;
-        img.style.cursor = "grab";
-      });
-    });
   </script>
-
-<script src="../validate.js"></script>
-<script src="../accordian.js"></script>
 
 </body>
 </html>
+
 
 
 
