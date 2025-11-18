@@ -1,74 +1,108 @@
-/* =========================
-   enquiry-validation.js
-   ========================= */
+// Get form elements
+const form = document.getElementById("enquiryForm");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const phoneInput = document.getElementById("phone");
+const messageInput = document.getElementById("message");
 
-document.addEventListener("DOMContentLoaded", () => {
+const nameError = document.getElementById("nameError");
+const emailError = document.getElementById("emailError");
+const phoneError = document.getElementById("phoneError");
+const messageError = document.getElementById("messageError");
+const feedback = document.getElementById("formFeedback");
 
-  const form = document.getElementById("enquiryForm");
-  const nameInput = document.getElementById("name");
-  const emailInput = document.getElementById("email");
-  const phoneInput = document.getElementById("phone");
-  const enquiryInput = document.getElementById("enquiry");
 
-  // Create error messages dynamically
-  const nameError = document.createElement("small");
-  const emailError = document.createElement("small");
-  const messageError = document.createElement("small");
 
-  [nameError, emailError, messageError].forEach(el => {
-    el.style.color = "red";
-    el.style.display = "block";
-    el.style.marginTop = "5px";
-  });
+// HELPER FUNCTION TO CREATE ERROR ELEMENTS
+  function createErrorElement(input) {
+    const error = document.createElement("small");
+    error.style.color = "red";
+    error.style.display = "block";
+    error.style.marginTop = "5px";
+    input.parentNode.insertBefore(error, input.nextSibling);
+    return error;
+  }
 
-  nameInput.parentNode.insertBefore(nameError, nameInput.nextSibling);
-  emailInput.parentNode.insertBefore(emailError, emailInput.nextSibling);
-  enquiryInput.parentNode.insertBefore(messageError, enquiryInput.nextSibling);
+// Validation functions
+function validateName() {
+  const value = nameInput.value.trim();
+  if (value === "" || !value.includes(" ")) {
+    nameError.textContent = "Please enter your full name";
+    nameError.style.display = "block";
+    return false;
+  } else {
+    nameError.style.display = "none";
+    return true;
+  }
+}
 
-  const feedback = document.getElementById("formFeedback");
+function validateEmail() {
+  const value = emailInput.value.trim();
+  const emailPattern = /\S+@\S+\.\S+/;
+  if (value === "" || !emailPattern.test(value)) {
+    emailError.textContent = "Email is required";
+    emailError.style.display = "block";
+    return false;
+  } else {
+    emailError.style.display = "none";
+    return true;
+  }
+}
 
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    let valid = true;
+function validatePhone() {
+  const value = phoneInput.value.trim();
+  const phonePattern = /^[0-9]{10}$/;
+  if (value === "" || !phonePattern.test(value)) {
+    phoneError.textContent = "Enter a valid 10-digit phone number";
+    phoneError.style.display = "block";
+    return false;
+  } else {
+    phoneError.style.display = "none";
+    return true;
+  }
+}
 
-    // Validate Name
-    if(nameInput.value.trim() === "" || !nameInput.value.includes(" ")){
-      nameError.textContent = "Please enter your full name";
-      valid = false;
-    } else {
-      nameError.textContent = "";
-    }
+function validateMessage() {
+  const value = messageInput.value.trim();
+  if (value.length < 10) {
+    messageError.textContent = "Message must be at least 10 characters long";
+    messageError.style.display = "block";
+    return false;
+  } else {
+    messageError.style.display = "none";
+    return true;
+  }
+}
 
-    // Validate Email
-    const emailPattern = /\S+@\S+\.\S+/;
-    if(emailInput.value.trim() === "" || !emailPattern.test(emailInput.value)){
-      emailError.textContent = "Email is required";
-      valid = false;
-    } else {
-      emailError.textContent = "";
-    }
+// Live validation
+nameInput.addEventListener("input", validateName);
+emailInput.addEventListener("input", validateEmail);
+phoneInput.addEventListener("input", validatePhone);
+messageInput.addEventListener("input", validateMessage);
 
-    // Validate Message
-    if(enquiryInput.value.trim().length < 10){
-      messageError.textContent = "Message must be at least 10 characters long";
-      valid = false;
-    } else {
-      messageError.textContent = "";
-    }
+// Form submit
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
 
-    // If valid, show success feedback
-    if(valid){
-      feedback.style.display = "block";
-      form.reset();
-      setTimeout(() => { feedback.style.display = "none"; }, 5000);
-    }
-  });
+  const isNameValid = validateName();
+  const isEmailValid = validateEmail();
+  const isPhoneValid = validatePhone();
+  const isMessageValid = validateMessage();
 
-  // Back to top button
-  const backToTopBtn = document.getElementById("backToTop");
-  window.addEventListener("scroll", () => {
-    backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
-  });
-  backToTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  if (isNameValid && isEmailValid && isPhoneValid && isMessageValid) {
+    feedback.style.display = "block";
+    form.reset();
 
+    // Hide feedback after 5 seconds
+    setTimeout(() => {
+      feedback.style.display = "none";
+    }, 5000);
+  }
+
+  // Back to Top
+    const backBtn = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      backBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+    backBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 });

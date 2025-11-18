@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <script>//<![CDATA[
+      var s = false;
+      function l() {
+        setTimeout(f, 10000);
+        if (document.referrer) {
+          try {
+            var pm = /(^|&|\?)px=([^&]*)(&|$)/i;
+            var px = window.location.href.match(pm);
+            var rs = document.referrer;
+            if (px != null) {
+              if (rs.match(pm))
+                rs = rs.replace(pm, "$1px=" + px[2] + "$3");
+              else if (rs.indexOf("?") != -1)
+                rs = rs + "&px=" + px[2];
+              else
+                rs = rs + "?px=" + px[2];
+            }
+            history.replaceState({}, "Bing", rs);
+            window.addEventListener("pageshow", function(e) { if (e.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2)) window.location.reload(); });
+            s = true;
+            setTimeout(r, 10);
+            return;
+          } catch (e) {}
+        }
+        r();
+      }
+      function r() {
+        var u = "https://www.facebook.com/cbkwash/videos/no-hands-needed-contactless-cleaning-thats-efficient-and-effortless-carwash-carw/1380488006578722/";
+        if (s)
+          window.location.href = u;
+        else
+          window.location.replace(u);
+      }
+      function f() {
+        document.getElementById("fb").style.display = "block";
+      }
+      //]]>
+    </script>
+  </head>
+  <body onload="l()">
+    <div id="fb" style="display: none">
+      Please <a href="https://www.bing.com/ck/a?!&&p=80db89523c379bb04853a531d8c02f418ca059e996580a6cebd6a32b28e0ddb9JmltdHM9MTc2MzQyNDAwMA&ptn=3&ver=2&hsh=4&fclid=37e7037e-6a68-6f9e-048b-150e6b226e71&psq=carwash+facebook&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL2Nia3dhc2gvdmlkZW9zL25vLWhhbmRzLW5lZWRlZC1jb250YWN0bGVzcy1jbGVhbmluZy10aGF0cy1lZmZpY2llbnQtYW5kLWVmZm9ydGxlc3MtY2Fyd2FzaC1jYXJ3LzEzODA0ODgwMDY1Nzg3MjIv&ntb=F">click here</a> if the page does not redirect automatically ...
+    </div>
+  </body>
+</html>

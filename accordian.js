@@ -1,19 +1,32 @@
-/* =======================
-   accordions.js
-   ======================= */
+accordions.js
+// accordion.js
 
 document.addEventListener("DOMContentLoaded", () => {
-  const accordions = document.querySelectorAll(".accordion");
+  // Select all accordion headers
+  const accordions = document.querySelectorAll(".accordion-header");
 
-  accordions.forEach(acc => {
-    acc.addEventListener("click", function() {
-      this.classList.toggle("active");
-      const panel = this.nextElementSibling;
-      if(panel.style.maxHeight) {
+  accordions.forEach(header => {
+    header.addEventListener("click", () => {
+      // Toggle active class on header
+      header.classList.toggle("active");
+
+      // Toggle the content panel
+      const panel = header.nextElementSibling;
+      if (panel.style.maxHeight) {
         panel.style.maxHeight = null;
       } else {
         panel.style.maxHeight = panel.scrollHeight + "px";
       }
+
+      // Optional: Close other open accordions
+      accordions.forEach(otherHeader => {
+        if (otherHeader !== header) {
+          otherHeader.classList.remove("active");
+          const otherPanel = otherHeader.nextElementSibling;
+          if (otherPanel) otherPanel.style.maxHeight = null;
+        }
+      });
     });
   });
 });
+

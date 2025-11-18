@@ -112,16 +112,19 @@
       cursor: pointer;
     }
 
-    /* Back to top button */
+    /* Back to Top Button */
     #backToTop {
       display: none;
       position: fixed;
       bottom: 30px;
       right: 30px;
-      z-index: 1000;
-      padding: 10px 15px;
-      font-size: 18px;
+      padding: 12px 18px;
+      background: #333;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
       cursor: pointer;
+      z-index: 1000;
     }
 
     footer {
@@ -190,13 +193,13 @@
         link.classList.add("active");
       }
     });
-
-    // Back to top button
-    const backToTopBtn = document.getElementById("backToTop");
+    
+    // Back to Top
+    const backBtn = document.getElementById("backToTop");
     window.addEventListener("scroll", () => {
-      backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+      backBtn.style.display = window.scrollY > 300 ? "block" : "none";
     });
-    backToTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+    backBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
     // Lightbox functionality
     const galleryImages = document.querySelectorAll("#gallery img");

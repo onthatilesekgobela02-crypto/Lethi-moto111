@@ -1,6 +1,5 @@
-/* =========================
+
    contact-validation.js
-   ========================= */
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -51,12 +50,13 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => { feedback.style.display = "none"; }, 5000);
     }
   });
-
-  // Back to top logic
-  const backToTopBtn = document.getElementById("backToTop");
-  window.addEventListener("scroll", () => {
-    backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
-  });
-  backToTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  
+  // Back to Top
+    const backBtn = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      backBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+    backBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  
 
 });

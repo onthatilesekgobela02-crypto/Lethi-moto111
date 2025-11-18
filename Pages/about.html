@@ -92,17 +92,22 @@
       margin-bottom: 10px;
       cursor: grab;
     }
-
+    
     /* Back to Top Button */
     #backToTop {
       display: none;
       position: fixed;
       bottom: 30px;
       right: 30px;
-      padding: 10px 15px;
+      padding: 12px 18px;
+      background: #333;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
       cursor: pointer;
       z-index: 1000;
     }
+
   </style>
 
 </head>
@@ -184,9 +189,9 @@
     <h3>Follow Lethi'Moto</h3>
 
     <p>
-      <a href="https://www.tiktok.com/@limpopo.explore/video/7355417578963078405" target="_blank">TikTok</a> |
-      <a href="../Assets/Instagram.html" target="_blank">Instagram</a> |
-      <a href="../Assets/Facebook.html" target="_blank">Facebook</a>
+      <a href="../Assets/Tiktok Link.htm" target="_blank">TikTok</a> |
+      <a href="../Assets/Instagram Link.htm" target="_blank">Instagram</a> |
+      <a href="../Assets/Facebook Link.htm" target="_blank">Facebook</a>
     </p>
 
     <p>&copy; 2025 Lethi'Moto Carwash | All Rights Reserved</p>
@@ -203,13 +208,13 @@
         link.classList.add("active");
       }
     });
-
-    // Back to top logic
-    const backToTopBtn = document.getElementById("backToTop");
+    
+    // Back to Top
+    const backBtn = document.getElementById("backToTop");
     window.addEventListener("scroll", () => {
-      backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+      backBtn.style.display = window.scrollY > 300 ? "block" : "none";
     });
-    backToTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+    backBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
     // Simple draggable images
     const draggableImages = document.querySelectorAll(".draggable");

@@ -85,13 +85,18 @@
       border: 0;
       border-radius: 8px;
     }
-
+    
+    /* Back to Top Button */
     #backToTop {
       display: none;
       position: fixed;
       bottom: 30px;
       right: 30px;
-      padding: 10px 15px;
+      padding: 12px 18px;
+      background: #333;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
       cursor: pointer;
       z-index: 1000;
     }
@@ -176,67 +181,15 @@
   <footer>
     <h3>Follow Lethi'Moto</h3>
     <p>
-      <a href="https://www.tiktok.com/@limpopo.explore/video/7355417578963078405" target="_blank">TikTok</a> |
-      <a href="../Assets/Instagram.html" target="_blank">Instagram</a> |
-      <a href="../Assets/Facebook.html" target="_blank">Facebook</a>
+      <a href="../Assets/Tiktok Link.htm" target="_blank">TikTok</a> |
+      <a href="../Assets/Instagram Link.htm" target="_blank">Instagram</a> |
+      <a href="../Assets/Facebook Link.htm" target="_blank">Facebook</a>
     </p>
     <p>&copy; 2025 Lethi'Moto Carwash | All Rights Reserved</p>
     <button id="backToTop">⬆ Back to Top</button>
   </footer>
 
 </section>
-
-<!-- JavaScript -->
-<script>
-  const form = document.getElementById("contactUsForm");
-  const nameInput = document.getElementById("name");
-  const emailInput = document.getElementById("email");
-  const messageInput = document.getElementById("message");
-
-  const nameError = document.getElementById("nameError");
-  const emailError = document.getElementById("emailError");
-  const messageError = document.getElementById("messageError");
-  const feedback = document.getElementById("formFeedback");
-
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    let valid = true;
-
-    // Validate Name
-    if(nameInput.value.trim() === "" || !nameInput.value.includes(" ")) {
-      nameError.textContent = "Please enter your full name";
-      nameError.style.display = "block";
-      valid = false;
-    } else {
-      nameError.style.display = "none";
-    }
-
-    // Validate Email
-    const emailPattern = /\S+@\S+\.\S+/;
-    if(emailInput.value.trim() === "" || !emailPattern.test(emailInput.value)) {
-      emailError.textContent = "Email is required";
-      emailError.style.display = "block";
-      valid = false;
-    } else {
-      emailError.style.display = "none";
-    }
-
-    // Validate Message
-    if(messageInput.value.trim().length < 10) {
-      messageError.textContent = "Message must be at least 10 characters long";
-      messageError.style.display = "block";
-      valid = false;
-    } else {
-      messageError.style.display = "none";
-    }
-
-    if(valid) {
-      feedback.style.display = "block";
-      form.reset();
-      setTimeout(() => { feedback.style.display = "none"; }, 5000);
-    }
-  });
-</script>
 
 <script src="../validate.js"></script>
 <script src="../accordian.js"></script>

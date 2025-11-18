@@ -1,7 +1,7 @@
 # Lethi-Moto
 ST10472193 
 
-This is a simple static website built using HTML and CSS.
+This is a simple static website built using HTML and CSS and Javascript.
 It demonstrates basic web structure, styling, and interactivity for assignment and practice reasons.
 
 Features
@@ -10,7 +10,7 @@ Features
 
     Navigation menu with linked pages
 
-    "Home","About Us", and "Contact" sections
+    "Home","About Us", "Enquiry", "Gallery", "Services" and "Contact" sections
 
     Font Awesome icons integration
 
@@ -25,7 +25,7 @@ File & Folder Structure
     |    ├── contact.html        # Contact page
          |   gallery.html        # Gallery page
          |   services.html       # Services page
-    │
+    │    |   enquiry.html        # Enquiry page
     ├── css/
     │   └── styles.css           # Main stylesheet   
     │
@@ -208,4 +208,108 @@ LethiMoto/
 ## License
 This project is for educational and personal/business use. Do not redistribute without permission.
 
+# Lethi'Moto Carwash Website
+
+Welcome to the Lethi'Moto Carwash website project. This site provides a professional online presence for Lethi'Moto Carwash, showcasing services, team, gallery, contact, and enquiry forms.
+
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Folder Structure](#folder-structure)
+- [Setup Instructions](#setup-instructions)
+- [Usage](#usage)
+- [Contact](#contact)
+
+## Project Overview
+The website is designed to provide information about Lethi'Moto Carwash services in Limpopo, South Africa. It includes:
+- Home, About, Services, Gallery, Contact, and Enquiry pages.
+- Online booking and enquiry forms with client-side validation.
+- Interactive gallery with lightbox.
+- Accordion feature for service details.
+
+## Features
+- Fully responsive layout for desktop and mobile.
+- JavaScript form validation for Contact and Enquiry forms.
+- Accordion functionality for organized service display.
+- Back-to-top button for easy navigation.
+- SEO-friendly meta tags and Open Graph integration.
+- Gallery with lightbox for enlarged image view.
+
+## Technologies Used
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- Google Maps iframe integration
+- Open Graph for social sharing
+
+## Folder Structure
+
+/Project Root
+├── Assets/ # Images, logos, gallery pictures
+├── CSS/
+│ └── style.css # Main stylesheet
+├── JS/
+│ ├── validation.js # Contact & Enquiry form validation
+│ ├── accordion.js # Accordion feature
+│ └── gallery.js # Lightbox gallery (if separate)
+├── Pages/
+│ ├── about.html
+│ ├── services.html
+│ ├── gallery.html
+│ ├── contact.html
+│ └── enquiry.html
+└── README.md
+
+
+## Setup Instructions
+1. Clone or download the repository.
+2. Ensure the folder structure remains the same for asset linking.
+3. Open `index.html` in a browser to view the homepage.
+4. Link JS files in HTML as needed, e.g.:
+```html
+<script src="../validate.js"></script>
+<script src="../accordion.js"></script>
+
+
+
+Changelog
+
+---
+
+### **CHANGELOG.md**
+```markdown
+# Lethi'Moto Carwash Website Changelog
+
+## [1.0.0] - 2025-11-18
+### Added
+- Initial website setup with Home, About, Services, Gallery, Contact, and Enquiry pages.
+- Responsive layout and navigation bar.
+- Hero section with logo on all pages.
+- About page with company background, vision, mission, and team section.
+- Services page with detailed services, booking form, and filter buttons.
+- Gallery page with clickable images and lightbox functionality.
+- Contact page with Google Maps, contact info, and client-side form validation.
+- Enquiry page with client-side form validation and feedback messages.
+- Accordion JavaScript functionality for service or FAQ sections.
+- Back-to-top button on all pages.
+- SEO meta tags and Open Graph integration for social sharing.
+
+### Changed
+- JS for form validation separated into `validation.js`.
+- Accordion functionality separated into `accordion.js`.
+
+### Fixed
+- Navigation highlighting for active pages.
+- Form feedback messages display and hide after 5 seconds.
+- Gallery images open in lightbox on click.
+
+### References
+- [MDN Web Docs – HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)  
+- [MDN Web Docs – CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)  
+- [MDN Web Docs – JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)  
+- [Google Maps Embed API](https://developers.google.com/maps/documentation/embed)  
+- [W3Schools – Form Validation](https://www.w3schools.com/js/js_validation.asp)  
+- [W3Schools – Accordion Example](https://www.w3schools.com/howto/howto_js_accordion.asp)  
+- [W3Schools – Lightbox Image Gallery](https://www.w3schools.com/howto/howto_js_lightbox.asp)
 
