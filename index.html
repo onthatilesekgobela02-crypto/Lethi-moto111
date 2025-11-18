@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,57 +23,65 @@
     <meta name="twitter:description" content="For a good, good wash – visit Lethi'Moto Carwash today!" />
     <meta name="twitter:image" content="./Assets/carwash-twitter-image.webp" />
 
-    <link rel="stylesheet" href="CSS/style.css" />
+    
+    <link rel="stylesheet" href="../Lethi-moto/CSS/style.css" />
 
     <style>
-        /* Css styling
+  /* Standard background for all pages */
+  body {
+    background-color: #f5f5f5; /* same as other pages */
+    font-family: Arial, sans-serif; /* match font style */
+    margin: 0;
+    padding: 0;
+  }
+    /* Header */
+header {
+  background: #1abc9c;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-            padding: 10px 0;
-            margin: 0;
-            flex-wrap: wrap;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav ul li a.active {
-            text-decoration: underline;
-        }
-
-        /* Hero Section */
-    #hero img {
-      width: 100%;
-      max-width: 300px;  /* Responsive size */
-      height: auto;
-      display: block;
-      margin: 20px auto;
+        /* Navigation */
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      padding: 10px 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a.active {
+      text-decoration: underline;
     }
 
-        .btn {
-            padding: 12px 22px;
-            background-color: #3268ff;
-            color: white;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 10px;
+        /* Hero Section */
+
+        #hero {
+            text-align: center;
+            padding: 20px;
         }
 
-        .btn:hover {
-            background-color: #234ecf;
+        #hero img {
+            width: 500px;
+            height: 500px;
+            object-fit: contain;
+            max-width: 90%;
+            display: block;
+            margin: 0 auto;
+        }
+        #hero .intro {
+            margin-top: 15px;
         }
 
         /* Back to Top */
@@ -90,6 +97,8 @@
             cursor: pointer;
             border-radius: 6px;
         }
+
+        
     </style>
 </head>
 
@@ -108,19 +117,21 @@
                 <li><a href="./Pages/Enquiry.html">Enquiry</a></li>
             </ul>
         </nav>
-    </header>
+          
+        <!-- HERO SECTION -->
+        <header id="hero">
+        <img src="../Lethi-moto/Assets/Lethi moto logo image.webp" alt="Lethi Moto Carwash Logo" width="500" height="500">
 
-    <!-- HERO SECTION -->
-    <main>
-        <section id="hero">
-             <img src="../Lethi-moto/Assets/LethiMoto Logo.jfif" alt="Lethi'Moto Carwash Logo">
+            
+        <main>
             <div class="intro">
                 <h2>For a Good, Good Wash!</h2>
                 <p>Bring your car to Lethi'Moto for top-notch cleaning and detailing services. Shine guaranteed!</p>
                 <a href="./Pages/contact.html" class="btn">Book Your Wash</a>
             </div>
-        </section>
-    </main>
+        </main>
+
+    </header>
 
     <!-- FOOTER -->
     <footer style="text-align:center; margin-top:30px;">
@@ -169,6 +180,7 @@
     <script src="../Lethi-moto/validate.js"></script>
 <script src="../Lethi-moto/accordian.js"></script>
 
-
 </body>
 </html>
+
+

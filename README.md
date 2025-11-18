@@ -294,15 +294,20 @@ Changelog
 - Accordion JavaScript functionality for service or FAQ sections.
 - Back-to-top button on all pages.
 - SEO meta tags and Open Graph integration for social sharing.
+- Female Team member
 
 ### Changed
 - JS for form validation separated into `validation.js`.
 - Accordion functionality separated into `accordion.js`.
+- Live feedback
+- Gallery slideshow picture sizes
 
 ### Fixed
 - Navigation highlighting for active pages.
 - Form feedback messages display and hide after 5 seconds.
 - Gallery images open in lightbox on click.
+- Logo pictures and size
+- Navigation Links
 
 ### References
 - [MDN Web Docs – HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)  

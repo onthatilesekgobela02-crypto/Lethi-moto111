@@ -128,6 +128,14 @@
         margin: 10px 0;
       }
     }
+    /* Form styling */
+    form { display: flex; flex-direction: column; gap: 12px; max-width: 500px; margin: auto; }
+    input, textarea, select { padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; width: 100%; box-sizing: border-box; }
+    button { padding: 12px; font-weight: bold; cursor: pointer; background: #007bff; color: #fff; border: none; border-radius: 5px; }
+    button:hover { background: #0056b3; }
+    .error-message { color: red; font-size: 14px; }
+    #formFeedback { display: none; color: green; font-weight: bold; text-align: center; margin-top: 10px; }
+  </style>
   </style>
 </head>
 <body>
@@ -198,5 +206,3 @@
 <script src="../accordian.js"></script>
 </body>
 </html>
-
-

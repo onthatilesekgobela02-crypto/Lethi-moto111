@@ -1,11 +1,9 @@
 /* General styles */
 body {
-  background-color: #eafaf1;
-  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5; /* Same as other pages */
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  color: #2d3436;
-  line-height: 1.6;
 }
 
 /* Header */

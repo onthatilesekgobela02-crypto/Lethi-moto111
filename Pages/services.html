@@ -41,7 +41,7 @@
       height: 500px;
       max-width: 90%;
     }
-    #hero h1, #hero p { text-align: center; margin: 10px 0; }
+    #hero h1, #hero p { text-align: center; margin: 15px 0; }
 
     /* Service List Styling */
     .service-category ul {
@@ -88,6 +88,15 @@
     }
     #submitBtn:hover { background: #555; }
 
+    /* Form styling */
+    form { display: flex; flex-direction: column; gap: 12px; max-width: 500px; margin: auto; }
+    input, textarea, select { padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; width: 100%; box-sizing: border-box; }
+    button { padding: 12px; font-weight: bold; cursor: pointer; background: #007bff; color: #fff; border: none; border-radius: 5px; }
+    button:hover { background: #0056b3; }
+    .error-message { color: red; font-size: 14px; }
+    #formFeedback { display: none; color: green; font-weight: bold; text-align: center; margin-top: 10px; }
+
+
     /* Back to Top Button */
     #backToTop {
       display: none;
@@ -102,6 +111,25 @@
       cursor: pointer;
       z-index: 1000;
     }
+
+    #hero img, header img {
+    width: 500px;       /* desktop size */
+    max-width: 90%;     /* responsive for smaller screens */
+    height: auto;       /* maintain aspect ratio */
+    display: block;
+    margin: 20px auto;
+  }
+
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    #hero img, header img {
+      width: 80%;       /* shrink on tablets/phones */
+      max-width: 300px;
+    }
+    header h1, header p {
+      font-size: 1.2rem;
+    }
+  }
   </style>
 </head>
 <body>
@@ -121,7 +149,7 @@
   <!-- Header -->
   <header>
     <section id="hero">
-      <img src="../Assets/LethiMoto Logo.jfif" alt="Lethi'Moto Carwash Logo">
+      <img src="../Assets/Lethi moto logo image.webp" alt="Lethi'Moto Carwash Logo" width="500" height="500">
       <h1>Lethi'Moto Carwash Services</h1>
       <p>We offer premium car care — from full washes to window tinting and aftercare products. Choose your service and book your wash below!</p>
     </section>
@@ -261,6 +289,7 @@
 
 <script src="../validate.js"></script>
 <script src="../accordian.js"></script>
+<script src="../contact val.js"></script>
 
 </body>
 </html>

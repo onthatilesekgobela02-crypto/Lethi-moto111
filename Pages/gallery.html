@@ -54,6 +54,7 @@
     header img {
       width: 500px;
       height: 500px;
+      object-fit: contain;
       max-width: 90%;
       display: block;
       margin: 0 auto;
@@ -133,6 +134,27 @@
       background-color: #f4f4f4;
       margin-top: 20px;
     }
+
+  #hero img, header img {
+    width: 500px;       /* desktop size */
+    max-width: 90%;     /* responsive for smaller screens */
+    height: auto;       /* maintain aspect ratio */
+    display: block;
+    margin: 20px auto;
+  }
+
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    #hero img, header img {
+      width: 80%;       /* shrink on tablets/phones */
+      max-width: 300px;
+    }
+    header h1, header p {
+      font-size: 1.2rem;
+    }
+  }
+
+
   </style>
 </head>
 <body>
@@ -150,7 +172,7 @@
 
   <!-- Header -->
   <header>
-    <img src="../Assets/LethiMoto Logo.jfif" alt="Lethi'Moto Carwash Logo">
+    <img src="../Assets/Lethi moto logo image.webp" alt="Lethi'Moto Carwash Logo" width="500" height="500">
     <h1>Lethi'Moto Carwash Gallery</h1>
     <p>Enjoy a slideshow showcasing Lethi'Moto's carwash services</p>
   </header>
