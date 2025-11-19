@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         panel.style.maxHeight = panel.scrollHeight + "px";
       }
 
-      // Optional: Close other open accordions
+      // Close other open accordions
       accordions.forEach(otherHeader => {
         if (otherHeader !== header) {
           otherHeader.classList.remove("active");
